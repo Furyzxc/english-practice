@@ -1,3 +1,16 @@
-export const App = () => {
-	return <div>React + Redux + Typescript Base</div>
+import { Speaker } from "@/components/speaker";
+import { Container } from "@mui/material";
+import { Input } from "@/components/input/page";
+
+
+export const App = () =>  {
+
+
+  return (
+    <Container sx={{textAlign:"center", pt: "180px"}}>
+       <Input />
+      <Speaker />
+    </Container>
+  )
 }
+
