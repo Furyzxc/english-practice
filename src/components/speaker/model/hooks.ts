@@ -7,7 +7,7 @@ interface Speaker {
   startRecording: () => void
   stopRecording: () => void
   handlePlay: () => void
-
+  ref: any
 }
 
 export const useSpeaker = (): Speaker => {
@@ -49,6 +49,6 @@ export const useSpeaker = (): Speaker => {
   }
 
   return {
-    recording, audioBlob, startRecording, handlePlay, stopRecording
+    recording, audioBlob, startRecording, handlePlay, stopRecording, ref: audioRef
   }
 }

@@ -4,11 +4,10 @@ import {
 	VolumeUpRounded,
 } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
-import { useRef, useState } from 'react'
 import { useSpeaker } from "@/components/speaker/model/hooks.ts";
 
 export const Speaker = () => {
-	const { recording, audioBlob, startRecording, stopRecording, handlePlay } = useSpeaker()
+	const { ref, recording, audioBlob, startRecording, stopRecording, handlePlay } = useSpeaker()
 	return (
 		<div>
 			<IconButton
@@ -32,8 +31,8 @@ export const Speaker = () => {
 			{audioBlob && (
 				<audio
 					hidden
-					ref={audioRef}
 					controls
+					ref={ref}
 					src={URL.createObjectURL(audioBlob)}
 				/>
 			)}
