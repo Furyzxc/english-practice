@@ -8,6 +8,7 @@ export const App = () =>  {
 
   return (
     <Container sx={{textAlign:"center", pt: "180px"}}>
+      <Speaker />
        <Input />
       <Speaker />
     </Container>

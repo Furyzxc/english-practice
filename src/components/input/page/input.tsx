@@ -2,6 +2,7 @@ import { TextField, Typography } from '@mui/material'
 import { ChangeEvent, useState } from 'react'
 import { useBoolean } from 'usehooks-ts'
 
+
 const defaultText = 'Hello! How are you?'
 
 export const Input = () => {
@@ -18,10 +19,10 @@ export const Input = () => {
 	}
 
 	return editMode ? (
-		<TextField minRows={4} value={text} onChange={onChange} onBlur={onBlur} />
+		<TextField multiline fullWidth minRows={4} value={text} onChange={onChange} onBlur={onBlur} />
 	) : (
 		<Typography onDoubleClick={setTrue} variant='h5'>
-			{text}
+			{text.split('\n').map(el => <div>{el}</div>)}
 		</Typography>
 	)
 }
